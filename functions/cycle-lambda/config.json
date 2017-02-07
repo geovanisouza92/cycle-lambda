@@ -2,6 +2,7 @@
   "name": "cycle-lambda",
   "bucket": "lambda-updates",
   "includeLib": true,
+  "testEvent": {},
   "envs": {
     "poc": {
       "functionName": "cycle-lambda",

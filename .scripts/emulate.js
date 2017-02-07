@@ -2,14 +2,15 @@
 
 require('dotenv').config()
 
-const cycleLambda = require('../functions/cycle-lambda')
+const path = require('path')
 
-test()
+test(process.argv.slice(2)[0])
 
-function test () {
-  const event = {}
+function test (functionName) {
+  const lambda = require(`../functions/${functionName}`)
+  const config = require(path.resolve(`functions/${functionName}/config.json`))
 
-  cycleLambda.handler(event, null, callback)
+  lambda.handler(config.testEvent, null, callback)
 }
 
 function callback (err, result) {

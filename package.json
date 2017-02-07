@@ -4,7 +4,7 @@
   "description": "AWS Lambda function written using Cycle.js",
   "main": "index.js",
   "scripts": {
-    "test": "node .scripts/emulate.js",
+    "test": "node .scripts/emulate.js cycle-lambda",
     "deploy": "env NODE_ENV=poc FUNCTION_NAME=cycle-lambda node .scripts/deploy.js",
     "postinstall": "node .scripts/link-functions.js"
   },
