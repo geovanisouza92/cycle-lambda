@@ -1,0 +1,32 @@
+{
+  "name": "cycle-lambda",
+  "version": "1.0.0",
+  "description": "AWS Lambda function written using Cycle.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "node .scripts/emulate.js",
+    "deploy": "env NODE_ENV=poc FUNCTION_NAME=cycle-lambda node .scripts/deploy.js",
+    "postinstall": "node .scripts/link-functions.js"
+  },
+  "keywords": [
+    "lambda",
+    "cyclejs",
+    "reactive"
+  ],
+  "author": "Geovani de Souza <geovanisouza92@gmail.com>",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "@cycle/xstream-run": "^4.2.0",
+    "ramda": "^0.23.0",
+    "xstream": "^10.2.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.9.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.0.0",
+    "dotenv": "^4.0.0",
+    "fs-extra": "^2.0.0"
+  }
+}
